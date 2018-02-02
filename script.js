@@ -46,10 +46,14 @@ Vue.component("tag", {
         }
     }
 });
+Vue.component('modal', {
+    template: '#modal-template'
+});
 new Vue({
     el: "#app",
     data: {
         newTodoText: "",
+        showModal: false,
         todos: [
             {
                 id: 1,
