@@ -1,0 +1,89 @@
+body {
+  font: 14px Tahoma;
+  background-image:url('http://www.wallpapersbrowse.com/images/zj/zj4cwzk.jpg');
+  color: #484646;
+}
+h1{
+  color: #8d8d8d;
+}
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+.list {
+  background-color: #ccc;
+  overflow: auto;
+  counter-reset: heading;
+  opacity: 0.8;
+  h3 {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+  }
+  &__item {
+    &-header {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 1px;
+      // color: #a6b0a8;
+    }
+    &-footer{
+      display: block;
+      text-align: right;
+      padding: 10px;
+      i{
+        cursor: pointer;
+        &:hover{
+          color: forestgreen;
+        }
+      }
+      input{
+        width: 100px;
+        padding: 5px;
+        outline: none;
+        color: #484646;
+        border: 0;
+        &[type='submit']{
+          background: #484646;
+          color: #ccc;
+          cursor: pointer;
+          &:hover{
+            background: #272727;
+          }
+        }
+      }
+    }
+    display: grid;
+    grid-template-columns: 30px 1fr 55px;
+    padding: 10px;
+    border-bottom: 1px solid #a6b0a8;
+    .text {
+      .load-num:hover {
+        color: #000;
+        cursor: pointer;
+        i {
+          display: inline-block;
+        }
+      }
+      i {
+        display: none;
+      }
+    }
+    .icon:before{
+      counter-increment: heading;
+      content:  counter(heading) ".";
+    }
+  }
+}
+.actions {
+  &__item {
+    padding: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    &:hover {
+      color: #000;
+      font-weight: bold;
+    }
+  }
+}

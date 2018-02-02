@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<div class="container" id='app'>
+    <h1>Lorem</h1>
+    <div class="list">
+        <h3>Lorem, ipsum.</h3>
+        <div class="list__item-header list__item">
+            <div></div>
+            <div>title</div>
+            <div></div>
+        </div>
+        <div>
+            <tag v-for="(todo, index) in todos" v-bind:key="todo.id" v-bind:title="todo.title" v-on:remove="removeRow(index)" :todo="todo" ></tag>
+        </div>
+        <div class=" list__item-footer ">
+            <i class="fa fa-plus " aria-hidden="true " v-on:click='addNewTodo'></i>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
