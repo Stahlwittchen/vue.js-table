@@ -5,12 +5,11 @@ Vue.component("tag", {
                 <div class="icon"></div>\
                 <div class="text" v-on:click="rewriteTitle">\
                   <span class="load-num">{{ title }} \
-                    <i class="fa fa-pencil" aria-hidden="true"></i>\
                   </span>\
                 </div>\
                 <div class="actions">\
                   <span class="actions__item actions__item-first">\
-                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>\
+                    <i class="fa fa-pencil" aria-hidden="true"></i>\
                   </span>\
                   <span class="actions__item actions__item-second" v-on:click="remove">\
                     <i class="fa fa-trash" aria-hidden="true"></i>\
