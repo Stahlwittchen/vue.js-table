@@ -71,11 +71,13 @@ new Vue({
     },
     methods: {
         addNewTodo: function() {
+            var current = document.querySelector('#addRow').value;
             this.todos.push({
                 id: this.nextTodoId++,
-                title: this.newTodoText
+                title: this.newTodoText = current
             });
             this.newTodoText = "";
+            return this.showModal = false
         },
         removeRow(index){
             this.todos.splice(index,1);

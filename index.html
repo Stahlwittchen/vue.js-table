@@ -69,8 +69,13 @@
                 <div slot="body">
                     <label>
                         Inter some text
-                        <input type="text">
+                        <input type="text" id="addRow">
                     </label>
+                </div>
+                <div slot="footer">
+                    <button class="modal-default-button" @click="addNewTodo()">
+                        OK
+                    </button>
                 </div>
             </modal>
         </div>
